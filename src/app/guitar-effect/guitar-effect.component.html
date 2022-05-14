@@ -1,0 +1,12 @@
+<div class="grid">
+    <div class="knobs">
+        <app-knob 
+            *ngFor="let knob of knobs" 
+            [knobLabel]="knob"
+        ></app-knob>
+    </div>
+    <div class="visualizer">
+        <canvas id="visualizer"></canvas>
+    </div>
+</div>
+

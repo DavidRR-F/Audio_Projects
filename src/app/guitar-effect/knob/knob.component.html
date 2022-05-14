@@ -1,0 +1,19 @@
+<div class="knob__container">
+    <label for="knob-surround" class="knob__label">{{knobLabel}}</label>
+    <div class="knob-surround" id="knob-surround">
+    
+        <div class="knob" KnobControl (newAngle)="initAngle($event)"></div>
+        
+        <span class="min">Min</span>
+        <span class="max">Max</span>
+        
+        <div class="ticks">
+            <div 
+                class="tick" 
+                *ngFor="let tick of ticks"
+                [ngClass]="tick <= activeTicks ? 'activetick' : ''"
+            ></div>
+        </div>
+        
+    </div>
+</div>
